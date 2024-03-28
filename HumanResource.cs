@@ -4,7 +4,6 @@ using PTOApp;
 
 namespace PTOApp
 {
-    
     // HumanResource subclass
     public class HumanResource : User
     {
