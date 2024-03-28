@@ -1,0 +1,17 @@
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\bin\Debug\net6.0-windows\PTOApplicationv2.exe
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\bin\Debug\net6.0-windows\PTOApplicationv2.deps.json
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\bin\Debug\net6.0-windows\PTOApplicationv2.runtimeconfig.json
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\bin\Debug\net6.0-windows\PTOApplicationv2.dll
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\bin\Debug\net6.0-windows\PTOApplicationv2.pdb
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.vbproj.GenerateResource.cache
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.AssemblyInfoInputs.cache
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.AssemblyInfo.vb
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.vbproj.CoreCompileInputs.cache
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.dll
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\refint\PTOApplicationv2.dll
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.pdb
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.genruntimeconfig.cache
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\ref\PTOApplicationv2.dll
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.DBHandler.resources
+C:\Users\Rashaa\Documents\W2024\BTM 495\PTOApplicationv2\obj\Debug\net6.0-windows\PTOApplicationv2.PTORequest.resources
