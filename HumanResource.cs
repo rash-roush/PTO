@@ -5,6 +5,7 @@ using PTOApp;
 namespace PTOApp
 {
     // HumanResource subclass
+    //test 4 github commit and pushhh
     public class HumanResource : User
     {
         public HumanResource(int sin, string lname, string fname, DateTime dob, 
