@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("PTOApplicationv2"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1436f08f6768e5212745b1ef336bba34911f839b"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97c359f771c08ce462c41bb408a4f9a6367c826f"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("PTOApplicationv2"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("PTOApplicationv2"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

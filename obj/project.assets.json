@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rashaa\\Desktop\\PTOApplicationv2\\PTOApplicationv2.vbproj",
+      "projectUniqueName": "C:\\Users\\Rashaa\\Desktop\\PTO\\PTOApplicationv2.vbproj",
       "projectName": "PTOApplicationv2",
-      "projectPath": "C:\\Users\\Rashaa\\Desktop\\PTOApplicationv2\\PTOApplicationv2.vbproj",
+      "projectPath": "C:\\Users\\Rashaa\\Desktop\\PTO\\PTOApplicationv2.vbproj",
       "packagesPath": "C:\\Users\\Rashaa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rashaa\\Desktop\\PTOApplicationv2\\obj\\",
+      "outputPath": "C:\\Users\\Rashaa\\Desktop\\PTO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
