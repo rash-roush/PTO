@@ -29,20 +29,42 @@ namespace PTOApp {
             AccID = accID;
         }
 
-        public List<string> SendNotification(int AccID) 
+        public List<string> SendNotification(int AccID)
         {
-            // Implementation for sending a notification
-            return new List<string>(); //to be adjusted
+            // Example implementation test
+            var notifications = new List<string>();
+            if (this.accID == AccID)
+            {
+                notifications.Add("You have pending PTO payouts to review.");
+            }
+            else
+            {
+                notifications.Add($"No pending tasks for accountant ID: {AccID}.");
+            }
+            return notifications;
         }
-        public bool ApprovePTOPayout(int PTOID) 
-        { 
-            //implementation for approving PTO payout
-            return false; //bool based on logic
-        }
-        public bool IssuePayment(int PTOID) 
+
+        public bool ApprovePTOPayout(int PTOID)
         {
-            // Implementation for issuing a payment
+            var ptoRequest = PTORequest.GetPTORequestById(PTOID);
+            if (ptoRequest != null)
+            {
+                // Logic to approve the PTO payout
+                return true;
+            }
             return false;
+        }
+
+        public bool IssuePayment(int PTOID)
+        {
+            var ptoRequest = PTORequest.GetPTORequestById(PTOID);
+            if (ptoRequest != null)
+            {
+                // Logic to issue the payment
+                
+                return ptoRequest.GetFullPTODetails(); // Added to PTORequest.cs
+            }
+            return null; 
         }
     }
 }

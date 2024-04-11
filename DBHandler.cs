@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//Git hub push test 5
+
 public class DBHandler
 {
     //Private attributes
@@ -38,59 +40,92 @@ public class DBHandler
     {
 
         // Return true if documentation is confirmed received, false otherwise
-        return true; // assuming documentation is received for this
+        return $"Documentation {DOCID} has been received and processed."; // assuming documentation is received for this
     }
     public string StartRequest(int PTOID)  //michelle
     {
         // Logic to start the request for PTO form
         // Update UI to indicate that the PTO request process has started
+        return $"PTO request {PTOID} has been started.";
     }
     public string InputInfo(int PTOID)
     {
-        /* Implementation needed */ return "";
+     
+        return $"Additional information for PTO request {PTOID} has been saved.";
     }
     public string FormSent(int PTOID) //Michelle
     {
         // Logic to handle the event when a form is sent to the DBHandler
+        return $"Form for PTO request {PTOID} has been sent.";
     }
     public void UpdatePTO()
-    { 
-        /* Implementation needed */ 
+    {
+        // Actual implementation would update PTO records as necessary need DB again
     }
     public int GetInformation(int PTOID) 
     {
-        /* Implementation needed */ return 0; 
+        {
+            // Simulate a database query to fetch details for the given PTOID
+            Dictionary<string, string> ptoDetails = new Dictionary<string, string>();
+
+            return ptoDetails;
+        }
     }
     public int ConfirmSchedule(int ScheduleID) 
     {
-        /* Implementation needed */ return 0;
+        //confirmation only 
+        return 0;
     }
     public List<string> ViewPTOHistory() 
     {
-        /* Implementation needed */ return new List<string>();
-    }
+        //returns past pto s
+        {
+            List<string> ptoHistory = new List<string>();
+
+
+            return ptoHistory;
+        }
     public List<string> FilterPTOHistory() 
     {
-        /* Implementation needed */ return new List<string>();
+        // Ask jonathan //need DB before
+         return new List<string>();
     }
-    public string UpdateRequest(int DOCID, int EmpID) 
+    public string UpdateRequest(int DOCID, int EmpID) //ask kevin 
+            return ""; 
+    }
+    
+    public List<string> StartPTOPlan() //noemie
+        // opens PTOPlan.vb
     {
-        /* Implementation needed */ return ""; 
+        Process.Start("PTOPlan.vb");
     }
-    public string GetRequestStatus(int DOCID, int EmpID) 
+    public List<string> SelectWeeksPTOPlan() //noemie
     { 
-        /* Implementation needed */ return ""; 
+        // need DB
+        return new List<string>(); 
     }
-    public List<string> StartPTOPlan() 
+    public List<string> ViewSchedule(int PTOPlanID) //noemie
+        {
+            // Retrieve the PTO Plan from storage DB
+            PTOPlan ptoPlan = RetrievePTOPlanFromStorage(PTOPlanID); 
+
+            // Check if PTOPlan was successfully retrieved
+            if (ptoPlan == null)
+            {
+                throw new ArgumentException("No PTO Plan found with the provided ID.");
+            }
+
+            // Compile the PTO Plan details into a list of strings
+            List<string> ptoPlanDetails = new List<string>
     {
-        /* Implementation needed */ return new List<string>(); 
+        $"PTO Plan ID: {ptoPlan.PTOPlanID}",
+        $"Start Date: {ptoPlan.StartDatePTOPlan.ToString("dd/MM/yyyy")}",
+        $"End Date: {ptoPlan.EndDatePTOPlan.ToString("dd/MM/yyyy")}",
+        $"Weeks Taken PTO: {ptoPlan.WeeksTakenPTO}",
+        $"PTO Remaining: {ptoPlan.PTORemaining}",
+        $"Confirmation Received: {ptoPlan.ConfirmationReception}"
+    };
+
+            return ptoPlanDetails;
+        }
     }
-    public List<string> SelectWeeksPTOPlan() 
-    { 
-        /* Implementation needed */ return new List<string>(); 
-    }
-    public List<string> ViewSchedule(int PTOPlanID) 
-    {
-        /* Implementation needed */ return new List<string>(); 
-    }
-}

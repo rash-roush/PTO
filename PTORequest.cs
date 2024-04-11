@@ -40,56 +40,105 @@ public class PTORequest
     // Methods
     public string UpdateRequest(int PTOID) 
     {
-        /* Implementation needed */ return ""; 
+        // Without a database, we can't really update anything, so just return a message.
+        return $"Request with ID {updatedPTOID} updated to status: {newStatus}.";
     }
-    public double VerifyPTOBalance() 
-    { /* Implementation needed */ 
-        return 0.0; 
-    }
-    public void UpdatePTORequest() //michelle
+    // Verifies the PTO balance and returns a simulated value.
+    public double VerifyPTOBalance()
     {
-        // Logic to update the PTO request with or without the documentation
-        // The 'withDocumentation' parameter indicates if documentation is to be considered in the update
+        // need DB
+        return 10.0; // Simulated PTO balance
     }
-    public double CalculatePTO() 
+
+    // Updates the PTO request, possibly including documentation.
+    public void UpdatePTORequest(bool withDocumentation)
     {
-        /* Implementation needed */ return 0.0; 
+        // need DB
     }
-    public DateTime GetRequestDate() 
+
+    // Calculates the PTO based on some business rules and returns a simulated value.
+    public double CalculatePTO()
     {
-        /* Implementation needed */ return default(DateTime);
+        //need DB
+        return 8.0; // Simulated PTO value
     }
-    public string GetRequestStatus() 
-    { 
-        /* Implementation needed */ return ""; 
-    }
-    public int ReceivedNewDuration() 
+
+    // Retrieves the request date and returns a simulated value.
+    public DateTime GetRequestDate()
     {
-        /* Implementation needed */ return 0; 
+       //need DB
+        return new DateTime(2024, 1, 1); 
     }
-    public int SendData(int DBHandler) 
+
+    // Gets the request status and returns a simulated value.
+    public string GetRequestStatus()
     {
-        /* Implementation needed */ 
-        return 0; 
+        
+        return "Approved"; // Simulated status
     }
-    public List<string> ReceivePTOInfo(int PTOID) 
-    { 
-        /* Implementation needed */ 
-        return new List<string>(); 
-    }
-    public List<string> ViewPTOHistory() 
-    { 
-        /* Implementation needed */ 
-        return new List<string>(); 
-    }
-    public bool SendPTOPlan(int PTOPlanID) 
+
+    // Receives a new duration for the PTO request and returns a simulated value.
+    public int ReceivedNewDuration(DateTime newEndDate)
     {
-        /* Implementation needed */ 
-        return false; 
+        //need a DB
+        return 1; // Simulated success code
     }
-    public List<string> ReceivePTOInfo() 
-    { 
-        /* Implementation needed */ 
-        return new List<string>(); 
+
+    // Sends data to the DBHandler and returns a simulated value.
+    public int SendData(int DBHandlerID)
+    {
+        // The logic would send data to the DBHandler identified by DBHandlerID.
+        return DBHandlerID; 
     }
+
+    // Receives PTO information based on the PTOID and returns a list of simulated details.
+    public List<string> ReceivePTOInfo(int PTOID)
+    {
+        // need db
+        return new List<string> { $"Info for PTO ID {PTOID}" }; // Simulated info
+    }
+
+    // Views the PTO history and returns a list of simulated history records.
+    public List<string> ViewPTOHistory()
+    {
+        // Return a placeholder list of PTO history records.
+        return new List<string> { "PTO Record 1", "PTO Record 2" }; 
+    }
+
+    // Sends the PTO plan and returns a simulated success status.
+    public bool SendPTOPlan(int PTOPlanID)
+    {
+       
+        return true; // Simulated success
+    }
+
+    // Receives PTO information and returns a list of simulated details.
+    public List<string> ReceivePTOInfo()
+    {
+     
+        return new List<string> { "General PTO Info 1", "General PTO Info 2" }; // Simulated info
+    }
+
+
+    // for Accountant.cs
+    public static PTORequest GetPTORequestById(int ptoID)
+    {
+        
+        return AllPTORequests.FirstOrDefault(req => req.PTOID == ptoID);
+    }
+
+    public List<string> GetFullPTODetails()
+    {
+        var details = new List<string>
+    {
+        $"PTOID: {PTOID}",
+        $"Fiscal Year: {PTOFiscalYear}",
+        // Add other details here
+    };
+        return details;
+    }
+
 }
+
+
+

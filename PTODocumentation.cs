@@ -26,14 +26,13 @@ public class PTODocumentation
     // Method to input documentation
     public string InputDocumentation(int DOCID)
     {
-        // TODO: Add actual implementation code here
+      
         return "Documentation has been input successfully.";
     }
 
     // Method to update a request
     public string UpdateRequest(int PTOID, int EmpID)
     {
-        // TODO: Add actual implementation code here
         return "PTO request has been updated successfully.";
     }
 }

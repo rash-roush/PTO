@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 
 namespace PTOApp
@@ -52,7 +53,25 @@ namespace PTOApp
         // methods
         public void ViewPTOHistory(int EmpID)
         {
-            //views history
+            // Define the path to the PTOHistory.vb file and open "PTOHistory.vb" window
+  
+            string filePath = @"C:\path\to\PTOHistory.vb";
+
+            try
+            {
+                // Use Process.Start to open the file with the default application
+                Process.Start(new ProcessStartInfo(filePath) { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                // Handles exceptions
+                Console.WriteLine("Unable to open the file. Error: " + ex.Message);
+            }
         }
-    }
+
+        //login purposes for DBHandler.cs
+       
+        
+        }
+
 }

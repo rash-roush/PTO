@@ -22,8 +22,21 @@ namespace PTOApp
 
         public void SendNotificationPTO(int PTOID)
         {
-            // Logic to send PTO notification
+            // Retrieve a list of PTOIDs for terminated employees from the DBHandler
+            List<int> ptoIDs = DBHandler.GetPTOIDsForTerminatedEmployees();
+
+            // Check if the specific PTOID is in the list of PTOIDs for terminated employees
+            if (ptoIDs.Contains(PTOID))
+            {
+                // Logic to send PTO notification
+                // Need to implement actual notification sending logic
+                // For now let's just print a message
+                Console.WriteLine($"Notification sent for PTOID: {PTOID}");
+            }
+            else
+            {
+                Console.WriteLine($"PTOID {PTOID} is not applicable for notification.");
+            }
         }
-    }
 
 }

@@ -25,19 +25,27 @@ public class Schedule
     }
 
     // Methods
-    public DateTime AssignSchedule(DateTime ptoDate)
+    public DateTime AssignSchedule(string ptoDate)
     {
-        // You will need to implement the logic to assign a schedule
-        // This is a placeholder for the assigned date
-        return ptoDate;
+        ReceiveDate = DateTime.ParseExact(ptoDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+        return ReceiveDate;
     }
 
-    // Method to send schedule, returning a list (stub implementation)
-    public List<Schedule> SendSchedule(int dbHandlerID)
+    // Method to send the schedule to a database handler or another storage mechanism
+    public List<string> SendSchedule()
     {
-        // You will need to implement the logic to send a schedule
-        // Placeholder for the list to be returned
-        List<Schedule> scheduleList = new List<Schedule>();
-        return scheduleList;
+        // Path to the file where schedules are saved
+        string filePath = "Schedules.txt";
+        // Format the schedule details as a string
+        string scheduleDetails = $"ScheduleID: {ScheduleID}, " +
+                                 $"ScheduleConfirmation: {ScheduleConfirmation}, " +
+                                 $"MonthDisplayed: {MonthDisplayed}, " +
+                                 $"Employees: {Employees}, " +
+                                 $"WeeksBeingUsedPTO: {WeeksBeingUsedPTO}, " +
+                                 $"AssignedWeeks: {AssignedWeeks}, " +
+                                 $"ReceiveDate: {ReceiveDate.ToString("dd/MM/yyyy")}";
+
+        // Append the new schedule to the file
+        File.AppendAllText(filePath, scheduleDetails + Environment.NewLine);
     }
 }

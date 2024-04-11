@@ -4,10 +4,25 @@
     <Compile Update="DBHandler.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Employee.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainPage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PTODocumentation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PTOHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PTOPlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PTORequest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Schedule.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

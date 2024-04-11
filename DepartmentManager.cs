@@ -41,11 +41,11 @@ namespace PTOApp
 
         public void ApproveModificationRequest() 
         {
-        
+        // need DB
         }
         public void ApproveCancelRequest() 
         { 
-        
+        // need DB
         }
         public int AccessPTO(int PTOID) 
         {
@@ -57,7 +57,11 @@ namespace PTOApp
         }
         public List<string> SendScheduleToEmployee(int ScheduleID) 
         {
-            return new List<string>();
+            List<string> notificationDetails = new List<string>
+                {
+                 $"Schedule {ScheduleID} sent to employee {EmpID}."
+                };
+            return notificationDetails;
         }
     }
 }
